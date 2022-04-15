@@ -318,3 +318,54 @@ button:active {
     opacity: 0.5;
   }
 }
+.mainbox {
+  margin: auto;
+  height: 600px;
+  width: 600px;
+  position: relative;
+}
+
+.err {
+  color: #9b9b9b;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11rem;
+  position: absolute;
+  left: 20%;
+  top: 8%;
+}
+
+.far {
+  position: absolute;
+  font-size: 11rem;
+  left: 44%;
+  top: 8%;
+  color: #9b9b9b;
+}
+
+.err2 {
+  color: #9b9b9b;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11rem;
+  position: absolute;
+  left: 68%;
+  top: 8%;
+}
+
+.msg {
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.6rem;
+  position: absolute;
+  left: 16%;
+  top: 45%;
+  width: 75%;
+}
+
+a {
+  text-decoration: none;
+  color: #31cefd;
+}
+
+a:hover {
+  text-decoration: underline;
+}

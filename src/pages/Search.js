@@ -82,7 +82,7 @@ function Search() {
                   handleUpdate={handleUpdate}
                 />
               );
-            }) // display each book witin the array
+            }) // display each book witin the array with handling error from the api shwon
           ) : (
             ''
           )}

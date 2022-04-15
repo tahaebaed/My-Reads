@@ -1,6 +1,12 @@
 # MyReads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This Project is to manage what you are reading and if You did read with commonalty to search for new books and set them on your shelves and it's separate three parts :
+1 - currently Reading
+which is has which book you are reading right now
+2- want to read
+books that you want to read shortly
+3 - read
+books you have done with reading it
 
 Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
 
@@ -22,14 +28,20 @@ To get started developing right away:
 │   ├── favicon.ico # React Icon, You may change if you wish.
 │   └── index.html # DO NOT MODIFY
 └── src
+    ├── components # The Resueable components of my project
+        └── BookItem.js # shown data for Each book in listbook or search result
     ├── pages # The commpnents that shown on Routes
         ├── Book.js # Handle Shown Data For the current Book.
-        ├── ListBook.js # Handle Shown Books Data with in the shelf Book.
+        ├── ListBook.js # Handle Shown Books Data with in the shelf Book section.
+        ├── Search.js # Handle the search page To show out the result of our search
+        └── NotFound.js # Handle the notfound page To show out if the user gone to wrong route
 
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains static HTML right now.
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
+    ├── utils
+        └── apis
+            └──  BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     ├── icons # Helpful images for your app. Use at your discretion.
     │   ├── add.svg
     │   ├── arrow-back.svg

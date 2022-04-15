@@ -8,7 +8,7 @@ const ListBooks = () => {
   const [wantToRead, setWantToRead] = useState([]);
   const [read, setRead] = useState([]);
   const [reRender, setReRender] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   const handleUpdate = (book, shelf) => bookAPI.update(book, shelf);
 
@@ -19,7 +19,7 @@ const ListBooks = () => {
       );
       setWantToRead(data.filter(book => book.shelf === 'wantToRead'));
       setRead(data.filter(book => book.shelf === 'read'));
-      setLoading(true);
+      setLoaded(true);
     });
   useEffect(
     () => {
@@ -30,19 +30,7 @@ const ListBooks = () => {
 
   const navigator = useNavigate();
 
-  return !loading ? (
-    <div className='lds-grid'>
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-    </div>
-  ) : (
+  return loaded ? (
     <div className='list-books'>
       <div className='list-books-title'>
         <h1>MyReads</h1>
@@ -57,7 +45,6 @@ const ListBooks = () => {
                   <BookItem
                     key={book.id}
                     book={book}
-                    reRender={reRender}
                     handleUpdate={handleUpdate}
                     setReRender={setReRender}
                   />
@@ -89,7 +76,6 @@ const ListBooks = () => {
                     setReRender={setReRender}
                     key={book.id}
                     book={book}
-                    reRender={reRender}
                     handleUpdate={handleUpdate}
                   />
                 ))}
@@ -108,7 +94,9 @@ const ListBooks = () => {
         </button>
       </div>
     </div>
-  );
+  ) : (
+    <div className='lds-grid'>Loading</div>
+  ); // This Statment to handle loaded screen if user didn't get any data from the api
 };
 
 export default ListBooks;

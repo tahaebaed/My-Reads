@@ -4,6 +4,7 @@ import Search from './pages/Search';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Book from './pages/Book';
+import NotFound from './pages/NotFound';
 class BooksApp extends React.Component {
   state = {
     /**
@@ -22,6 +23,7 @@ class BooksApp extends React.Component {
           <Route path='/' element={<ListBooks />} />
           <Route path='/search' element={<Search />} />
           <Route path='/books/:bookId' element={<Book />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
     );
